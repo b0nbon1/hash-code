@@ -30,6 +30,9 @@ function subsetSum(numbers, target, partial) {
   if (s >= target) {
     return;  
   }
+  if (s < total) {
+    return;  
+  }
   for (var i = 0; i < numbers.length; i++) {
     n = Number(numbers[i]);
     remaining = numbers.slice(i + 1);
@@ -39,7 +42,7 @@ function subsetSum(numbers, target, partial) {
 }
 
 var fs = require('fs');
-var fileName = 'inputDataC.in'
+var fileName = 'pizza/inputDataA.in'
 var array = fs.readFileSync(fileName).toString().split("\n");
 const slices = Number(array[0].split(' ')[0])
 const pizzaTypes = array[1].split(' ')

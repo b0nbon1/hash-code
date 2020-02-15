@@ -24,7 +24,7 @@ function subsetSum(numbers, target, partial) {
 }
 
 var fs = require('fs');
-var fileName = 'inputDataC.in'
+var fileName = 'pizza/inputDataB.in'
 var array = fs.readFileSync(fileName).toString().split("\n");
 const slices = Number(array[0].split(' ')[0])
 const pizzaTypes = array[1].split(' ')
